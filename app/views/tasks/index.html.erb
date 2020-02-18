@@ -1,7 +1,7 @@
 <h1>My tasks</h1>
 <ul>
  <% @tasks.each do |task| %>
- <p><%= check_box_tag(task)%> <%=link_to task.title, task_path(task)%></p>
+ <p><%= check_box_tag(task)%> <%=link_to task.title, task_path(task)%> <%= link_to 'delete', delete_path(task), method: :delete, data: { confirm: 'Are you sure?' } %></p>
  <%end%>
 </ul>
 
